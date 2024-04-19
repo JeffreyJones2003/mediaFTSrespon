@@ -11,6 +11,57 @@
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 90%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3,300px);
+  justify-content: center;
+  align-content: center;
+  gap: 16px;
+}
+
+
+.img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#modal{
+  background-color: rgba(255,255,255,0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  display: none;
+}
+
+
+#modal.active{
+  display: grid;
+  place-items: center;
+}
+
+#img{
+  max-width: 50%;
+  max-height: 50%;
+  border: 4px solid white;
+  box-shadow: 1px 3px 20px rgba(0,0,0,0.5);
+}
+    </style>
   </head>
   <body>
     <!-- Header Section -->
@@ -44,123 +95,127 @@
     </header>
 
     <main class="main">
-      <!-- HOME SECTION -->
+      <!-- HOME SECTION
       <section class="home bd_grid" id="home">
         <div class="home_data" data-aos="fade-down">
           <h1 class="home_title">
-            Hi, welcome to<br /><span class="home_title-color">Media FTS</span
-            ><br />We grow Together
           </h1>
-          <a href="#contact" class="button"> Contact</a>
+        </div>  
+        <div class="home_img" data-aos="fade-down" data-aos-delay="500">    
+        </div>
+      </section> -->
+
+      <!-- ABOUT SECTION -->
+      <section class="about section" id="about">
+        <h2 class="section-title" data-aos="fade-down">Editing</h2>
+        <h2 style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350"> Photo Editing</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our professional photo editing service! We specialize in enhancing your images to perfection, ensuring each photo tells a story and leaves a lasting impression. Our skilled team of editors utilizes advanced software to retouch, color correct, and refine your images, bringing out the best in every shot. Whether it's portraits, landscapes, product photography, or any other genre, we offer a range of editing techniques such as exposure adjustments, skin retouching, background enhancements, and creative effects to make your photos truly stand out. With an eye for detail and a commitment to excellence, we guarantee stunning results that meet your unique preferences and elevate your visual content. Let us transform your photos into captivating masterpieces with our expert photo editing services in affordable prices.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
+        </div>
+        <h2 style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350"> video Editing</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our professional photo editing service! We specialize in enhancing your images to perfection, ensuring each photo tells a story and leaves a lasting impression. Our skilled team of editors utilizes advanced software to retouch, color correct, and refine your images, bringing out the best in every shot. Whether it's portraits, landscapes, product photography, or any other genre, we offer a range of editing techniques such as exposure adjustments, skin retouching, background enhancements, and creative effects to make your photos truly stand out. With an eye for detail and a commitment to excellence, we guarantee stunning results that meet your unique preferences and elevate your visual content. Let us transform your photos into captivating masterpieces with our expert photo editing services in affordable prices.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
         </div>
 
-        <div class="home_social">
-          <a href="#" class="home_social-icon" data-aos="fade-down"
-            >
-            <i class="bx bxl-instagram"></i>
-          </a>
-          <a
-            href="#"
-            class="home_social-icon"
-            data-aos="fade-down"
-            data-aos-delay="250"
-            >
-            <i class='bx bxl-youtube' ></i></a>
-          <a
-            href="#"
-            class="home_social-icon"
-            data-aos="fade-down"
-            data-aos-delay="300"
-            ><i class='bx bxl-whatsapp'></i>
-          </a>
-          <a
-            href="#"
-            class="home_social-icon"
-            data-aos="fade-down"
-            data-aos-delay="350"
-            ><i class='bx bxl-telegram' ></i>
-          </a>
-          <a
-            href="#"
-            class="home_social-icon"
-            data-aos="fade-down"
-            data-aos-delay="400"
-            ><i class='bx bxl-gmail' ></i>
-          </a>
+        <!-- <div class="about_container bd_grid">
+          <div class="about_img" data-aos="fade-down" data-aos-delay="50">
+          </div> </div> -->
+
+        <h2 class="section-title" data-aos="fade-down"> Websites</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our professional website creation service, where innovation meets functionality! We specialize in designing and developing custom websites that seamlessly blend stunning visuals with user-friendly interfaces. Our team of skilled designers, developers, and UX/UI specialists collaborates closely with you to understand your brand, goals, and audience. Whether it's for businesses, e-commerce, portfolios, blogs, or any other purpose, we create responsive, modern websites that reflect your unique identity and meet your specific requirements. From intuitive navigation to captivating layouts, our expertise spans across various platforms and technologies, ensuring a seamless online presence. We prioritize user experience, incorporating the latest design trends and optimization techniques to ensure your website engages and retains visitors. With a focus on quality, functionality, and aesthetics, we aim to deliver a website that not only looks impressive but also drives results. Let us turn your vision into a stunning reality with our professional website creation services.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
+        </div>
+        <h2 class="section-title" data-aos="fade-down">VFX</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          VFX services encompass a diverse array of tools, software, and agencies dedicated to creating visually captivating content for websites. Animation software like Adobe After Effects and Blender empowers creators to craft intricate 2D and 3D animations, while particle effects libraries, such as those provided by Unity and Unreal Engine, offer pre-made effects like fire and rain for easy integration. Web animation libraries like GreenSock (GSAP) and Three.js provide developers with the tools to add sophisticated animations directly to web pages, leveraging features like timeline-based controls and WebGL rendering. Additionally, video editing software such as Adobe Premiere Pro enables the creation and editing of video content tailored for online platforms. Interactive web design platforms like Webflow and Adobe XD offer intuitive interfaces for designing dynamic web experiences without coding. For those seeking professional-grade solutions, VFX agencies and studios specialize in crafting bespoke content, leveraging teams of designers and animators to meet specific project requirements. Stock VFX marketplaces like Shutterstock and Envato Elements offer a vast selection of pre-made assets, including animations and motion graphics templates, providing accessible options for enhancing website visuals. Whether seeking custom solutions or leveraging pre-made assets, the range of VFX services available caters to diverse needs and budgets, enabling creators to elevate the visual appeal of their online content.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
         </div>
 
-        <div class="home_img" data-aos="fade-down" data-aos-delay="500">
-    
+        <h2 class="section-title" data-aos="fade-down">Short Film Making</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our short filmmaking service, where creativity meets storytelling excellence! We specialize in crafting compelling and impactful short films that resonate with audiences. From concept development to scriptwriting, filming, editing, and post-production, our team of passionate filmmakers and technicians work collaboratively to bring your vision to life. Whether it's a narrative-driven story, a documentary, promotional content, or artistic expression, we meticulously plan and execute every step to create a captivating visual experience. Our expertise in cinematography, direction, sound design, and editing ensures a polished final product that leaves a lasting impression. With attention to detail and a commitment to storytelling, we aim to deliver powerful narratives that engage, inspire, and entertain. Let us transform your ideas into a remarkable short film that speaks volumes with our professional short filmmaking services..</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
+        </div>
+
+        <h2 class="section-title" data-aos="fade-down">Shoots</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our comprehensive photo and video shoot service, where creativity meets professionalism! We specialize in capturing moments that matter, offering a seamless fusion of exceptional photography and cinematic videography tailored to your needs. Whether it's for weddings, events, product launches, corporate branding, or personal projects, our experienced team brings expertise, creativity, and state-of-the-art equipment to ensure your vision comes to life. From stunning visuals to storytelling, our photographers and videographers work in harmony, capturing every detail and emotion, delivering a cohesive narrative. We offer a personalized approach, understanding your preferences and delivering high-quality, compelling content. Let us create timeless memories and compelling visuals that exceed your expectations with our exceptional photo and video shoot services in affordable prices.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
+           
+        </div>
+
+        <h2 class="section-title" data-aos="fade-down">Song Composing</h2>
+        <p style="padding: 50px; "  data-aos="fade-down"data-aos-delay="350">
+          Welcome to our professional song composing service, We specialize in creating original, captivating music across various genres tailored to your specific needs. Our team of skilled composers, lyricists, and musicians collaborates closely with you to understand your vision, emotions, and message. Whether it's for an album, commercial jingle, film score, or personal project, we craft unique compositions that resonate with your audience. From catchy tunes to heartfelt ballads, our expertise spans diverse musical styles, ensuring each piece reflects your desired mood and tone. With a keen ear for harmony and a dedication to innovation, we strive to deliver melodies and lyrics that leave a lasting impact. Let us bring your ideas to life and evoke emotions through our professional song composing services.</p>
+          <div class="container">
+            <img src="./assets/img/photoediting 1.jpg" class="img">
+            <img src="./assets/img/photoediting2.jpg"class="img">
+            <img src="./assets/img/photoediting3.jpg" class="img">
+            <img src="./assets/img/photoediting4.jpg" class="img">
+            <img src="./assets/img/photoediting5.jpg" class="img">
+            <img src="./assets/img/photoediting 6.jpg" class="img">
            
         </div>
       </section>
 
-      <!-- ABOUT SECTION -->
-      <section class="about section" id="about">
-        <h2 class="section-title" data-aos="fade-down">About</h2>
-
-        <div class="about_container bd_grid">
-          <div class="about_img" data-aos="fade-down" data-aos-delay="50">
-
-          </div>
-
-          <div>
-            <h2
-              class="about_subtitle"
-              data-aos="fade-down"
-              data-aos-delay="350"
-            >
-              Media FTS
-            </h2>
-            <p class="about_text" data-aos="fade-down" data-aos-delay="450">
-              Media fts is the labor of love for the people
-We’re providing media related services that may help you in multiple ways
-            </p>
-          </div>
-        </div>
-      </section>
-
       
-      <!-- services SECTION -->
+      <!-- services SECTION
       <section class="work section" id="services">
         <h2 class="section-title" data-aos="fade-down">Services</h2>
-
         <div
           class="work_container bd_grid"
           data-aos="fade-down"
           data-aos-delay="250"
-        >
-          <div class="work_img">
-            <img src="./assets/img/editing.jpg" alt="" />
-          </div>
-
-          <div class="work_img">
-            <img src="./assets/img/website-development.jpg" alt="" />
-          </div>
-
-          <div class="work_img">
-            <img src="./assets/img/vfx.jpg" alt="" />
-          </div>
-
-          <div class="work_img">
-            <img src="./assets/img/short film making.jpg" alt="" />
-          </div>
-
-          <div class="work_img">
-            <img src="./assets/img/shoots.jpg" alt="" />
-          </div>
-
-          <div class="work_img">
-            <img src="./assets/img/song composing.jpg" alt="" />
-          </div>
-        </div>
+        >       </div>
       </section>
-
-      <!-- CONTACT SECTION -->
-
+       CONTACT SECTION
       <section class="contact section" id="contact">
         <h2 class="section-title" data-aos="fade-down">Contact</h2>
-      </section>
+      </section> -->
 
       <!-- Footer Section -->
       <footer class="footer">
