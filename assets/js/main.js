@@ -29,26 +29,21 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 // Photo Gallery Slider
 
-const modal=document.createElement('div');
-modal.id='modal';
-document.body.appendChild(modal);
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-const images=document.querySelectorAll('.img');
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
 
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
 
-images.forEach(image=>{
-  image.addEventListener('click',()=>{
-    modal.classList.add('active');
-    const img=document.createElement('img');
-    img.src=image.src;
-    img.id="img";
-    while(modal.firstChild){
-      modal.removeChild(modal.firstChild);
-    }
-    modal.append(img);
-  });
-});
-
-modal.addEventListener('click',()=>{
-  modal.classList.remove('active');
-});
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
